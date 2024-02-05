@@ -18,9 +18,6 @@ require("lazy").setup({
     { import = "plugins" },
   },
 
-  change_detection = {
-    notify = false,
-  },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
     -- If you know what you're doing, you can set this to `true` to have all your custom plugins lazy-loaded by default.
@@ -30,8 +27,8 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  install = { colorscheme = { "tokyonight", "habamax", "catppuccin" } },
-  checker = { enabled = true }, -- automatically check for plugin updates
+  install = { colorscheme = { "catppuccin-mocha" } },
+  checker = { enabled = true, frequency = 86400, notify = false },
   performance = {
     rtp = {
       -- disable some rtp plugins
